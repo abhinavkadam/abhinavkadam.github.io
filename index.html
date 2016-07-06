@@ -30,7 +30,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="js/liquidFillGauge.js" language="JavaScript"></script>
+    <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+    </style>
 </head>
 
 <body id="page-top" class="index">
@@ -79,7 +83,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To My World!</div>
-                <div class="intro-heading"> ~ ABHINAV KADAM</div>
+               <!--  <div class="intro-heading"> ~ ABHINAV KADAM</div> -->
                 <a href="#education" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
@@ -128,12 +132,121 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
+                    <h2 class="section-heading">Skills and Expertise</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
+             <div class="row"> 
+                   <!--   Code for skills js  -->
+                   <table>
+                        <tr>
+                            <td><h2 class="section-heading">Java</h2></td>
+                            <td> <svg id="fillgauge1" width="97%" height="75" onclick="gauge1.update(NewValue());"></svg></td>
+                        </tr>
+                        <tr>
+                            <td><h2 class="section-heading">J2EE</h2></td>
+                            <td> <svg id="fillgauge2" width="97%" height="75" onclick="gauge1.update(NewValue());"></svg></td>
+                        </tr>
+                        <tr>
+                            <td><h2 class="section-heading">ADF</h2></td>
+                            <td> <svg id="fillgauge3" width="97%" height="75" onclick="gauge1.update(NewValue());"></svg></td>
+                        </tr>
+                        <tr>
+                            <td><h2 class="section-heading">MEAN</h2></td>
+                            <td> <svg id="fillgauge4" width="97%" height="75" onclick="gauge1.update(NewValue());"></svg></td>
+                        </tr>
+                        <tr>
+                            <td><h2 class="section-heading">Html/CSS</h2></td>
+                            <td> <svg id="fillgauge5" width="97%" height="75" onclick="gauge1.update(NewValue());"></svg></td>
+                        </tr>
+                        <tr>
+                            <td><h2 class="section-heading">Java Script</h2></td>
+                            <td> <svg id="fillgauge6" width="97%" height="75" onclick="gauge1.update(NewValue());"></svg></td>
+                        </tr>
+                    </table>
+                        
+                        <script language="JavaScript">
+     var gauge1 = loadLiquidFillGauge("fillgauge1", 55);
+    var config1 = liquidFillGaugeDefaultSettings();
+    config1.circleColor = "#FF7777";
+    config1.textColor = "#FF4444";
+    config1.waveTextColor = "#FFAAAA";
+    config1.waveColor = "#FFDDDD";
+    config1.circleThickness = 0.2;
+    config1.textVertPosition = 0.2;
+    config1.waveAnimateTime = 1000;
+    var gauge2= loadLiquidFillGauge("fillgauge2", 28, config1);
+    var config2 = liquidFillGaugeDefaultSettings();
+    config2.circleColor = "#D4AB6A";
+    config2.textColor = "#553300";
+    config2.waveTextColor = "#805615";
+    config2.waveColor = "#AA7D39";
+    config2.circleThickness = 0.1;
+    config2.circleFillGap = 0.2;
+    config2.textVertPosition = 0.8;
+    config2.waveAnimateTime = 2000;
+    config2.waveHeight = 0.3;
+    config2.waveCount = 1;
+    var gauge3 = loadLiquidFillGauge("fillgauge3", 60.1, config2);
+    var config3 = liquidFillGaugeDefaultSettings();
+    config3.textVertPosition = 0.8;
+    config3.waveAnimateTime = 5000;
+    config3.waveHeight = 0.15;
+    config3.waveAnimate = false;
+    config3.waveOffset = 0.25;
+    config3.valueCountUp = false;
+    config3.displayPercent = false;
+    var gauge4 = loadLiquidFillGauge("fillgauge4", 50, config3);
+    var config4 = liquidFillGaugeDefaultSettings();
+    config4.circleThickness = 0.15;
+    config4.circleColor = "#808015";
+    config4.textColor = "#555500";
+    config4.waveTextColor = "#FFFFAA";
+    config4.waveColor = "#AAAA39";
+    config4.textVertPosition = 0.8;
+    config4.waveAnimateTime = 1000;
+    config4.waveHeight = 0.05;
+    config4.waveAnimate = true;
+    config4.waveRise = false;
+    config4.waveHeightScaling = false;
+    config4.waveOffset = 0.25;
+    config4.textSize = 0.75;
+    config4.waveCount = 3;
+    var gauge5 = loadLiquidFillGauge("fillgauge5", 60.44, config4);
+    var config5 = liquidFillGaugeDefaultSettings();
+    config5.circleThickness = 0.4;
+    config5.circleColor = "#6DA398";
+    config5.textColor = "#0E5144";
+    config5.waveTextColor = "#6DA398";
+    config5.waveColor = "#246D5F";
+    config5.textVertPosition = 0.52;
+    config5.waveAnimateTime = 5000;
+    config5.waveHeight = 0;
+    config5.waveAnimate = false;
+    config5.waveCount = 2;
+    config5.waveOffset = 0.25;
+    config5.textSize = 1.2;
+    config5.minValue = 30;
+    config5.maxValue = 150
+    config5.displayPercent = false;
+    var gauge6 = loadLiquidFillGauge("fillgauge6", 120, config5);
+
+    function NewValue(){
+        if(Math.random() > .5){
+            return Math.round(Math.random()*100);
+        } else {
+            return (Math.random()*100).toFixed(1);
+        }
+    }
+</script>
+
+
+
+                    <!-- Ends code for skills js  --> 
+
+                <!--  Old Portfolio code  
+
+                    <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -146,8 +259,8 @@
                         <h4>Round Icons</h4>
                         <p class="text-muted">Graphic Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                </div> -->
+                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -160,8 +273,8 @@
                         <h4>Startup Framework</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                </div> -->
+               <!--  <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -174,8 +287,8 @@
                         <h4>Treehouse</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                </div> -->
+               <!--  <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -188,8 +301,8 @@
                         <h4>Golden</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                 <div class="col-md-4 col-sm-6 portfolio-item">
+                </div> -->
+                 <!-- <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -202,8 +315,8 @@
                         <h4>Escape</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                </div> -->
+                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -216,9 +329,9 @@
                         <h4>Dreams</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div> -->
+         </div> 
+      </div> 
     </section>
 
     <!-- About Section -->
@@ -235,7 +348,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/logo/symantec.gif" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -249,7 +362,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/logo/ibm.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -263,7 +376,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/logo/oracle.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -277,7 +390,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/logo/ascentis.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -291,8 +404,8 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Be A Part
-                                    <br>Of My
+                                <h4>Be a Part
+                                    <br>of My
                                     <br>Story!</h4>
                             </div>
                         </li>
@@ -402,12 +515,17 @@
                     <h2 class="section-heading">Contact Me</h2>
                     <h3 class="section-subheading text-muted">You can get in touch with me on the social media or leave me a message here.<br><br>
                     	<ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://www.linkedin.com/in/abhinavkadam"><i class="fa fa-linkedin"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/abhinavbkadam"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.instagram.com/rush2abhi/"><i class="fa fa-instagram"></i></a>
                             </li>
+                            <li><a href="https://twitter.com/abhinav_kadam"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.youtube.com/channel/UC31HYtud_6xpi71vpv8A74w"><i class="fa fa-youtube"></i></a>
+                            </li>
+                            
                         </ul> 
                     </h3>
                        
